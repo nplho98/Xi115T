@@ -349,7 +349,7 @@ if(!options.length)return'<div class="empty">還沒有球員紀錄</div>';
       const decodeBase64=value=>Uint8Array.from(atob(value.trim()),char=>char.charCodeAt(0));
       async function decryptData(pass){
         let response;
-        try{response=await fetch("data.enc?v=20260913_134438488",{cache:"no-store"});}catch(err){throw Object.assign(new Error("data.enc 讀取失敗"),{code:"data"});}
+        try{response=await fetch("data.enc?v=20260913_151612192",{cache:"no-store"});}catch(err){throw Object.assign(new Error("data.enc 讀取失敗"),{code:"data"});}
         if(!response.ok)throw Object.assign(new Error("data.enc 讀取失敗"),{code:"data"});
         const blob=decodeBase64(await response.text());
         if(blob.length<45)throw new Error("資料檔格式不對");
